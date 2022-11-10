@@ -20,7 +20,7 @@ const FindMovie = () => {
     <>
       <div>
         <div className="header">
-          <h2>FindMovie</h2>
+          <h2>MovieMarket</h2>
         </div>
         <div className="body">
           <input
