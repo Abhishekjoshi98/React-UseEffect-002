@@ -33,6 +33,7 @@ const Movie = () => {
               setMovieTitle(e.target.value);
             }}
           />
+         <p>If your Chrome browser gives you Mixed Content error then please click on the padlock symbol > Site setting > Insecure Content > Allow and then reload.</p>
           <button
             onClick={() => {
               setIsClicked((prevState) => !prevState);
@@ -43,7 +44,7 @@ const Movie = () => {
           </button>
         </div>
         <div className="body-container">
-          <p>Sharing a few of our favourite movies</p>
+          <p>Here We Have Some Movies for You</p>
         </div>
         <div className="display">
           {movieData !== undefined ? movieData.map((item, i) => {
