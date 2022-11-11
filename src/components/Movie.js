@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-const FindMovie = () => {
+const Movie = () => {
   const [movieData, setMovieData] = useState([]);
   const [MovieTitle, setMovieTitle] = useState('Marvel');
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
+    if(MovieTitle !== undefined)
     const fetchMovies = async () => {
       const URL = `http://www.omdbapi.com/?s=${MovieTitle}&apikey=f2c67f94`;
       const response = await fetch(URL);
@@ -14,7 +15,7 @@ const FindMovie = () => {
       setMovieData(final_Data.Search);
     };
     fetchMovies();
-        // eslint-disable-next-line
+  }
   }, [isClicked]);
   return (
     <>
@@ -44,7 +45,7 @@ const FindMovie = () => {
           <p>Sharing a few of our favourite movies</p>
         </div>
         <div className="display">
-          {movieData.map((item, i) => {
+          {movieData !== undefined ? movieData.map((item, i) => {
             return (
               <div key={i} className="display-cards">
                 <img src={item.Poster} className="picture" alt="poster"/>
@@ -52,11 +53,11 @@ const FindMovie = () => {
                 <p>Year- {item.Year}</p>
               </div>
             );
-          })}
+          }):false}
         </div>
       </div>
     </>
   );
 };
 
-export default FindMovie;
+export default Movie;
