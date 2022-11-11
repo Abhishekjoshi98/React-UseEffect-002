@@ -8,10 +8,10 @@ const Movie = () => {
   useEffect(() => {
     if(movieTitle !== undefined){
     const fetchMovies = async () => {
-      const URL = `http://www.omdbapi.com/?s=${MovieTitle}&apikey=f2c67f94`;
+      const URL = `http://www.omdbapi.com/?s=${movieTitle}&apikey=f2c67f94`;
       const response = await fetch(URL);
       const final_Data = await response.json();
-      console.log(final_Data.Search);
+      //console.log(final_Data.Search);
       setMovieData(final_Data.Search);
     };
     fetchMovies();
