@@ -6,7 +6,6 @@ const Movie = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
-    if(movieTitle !== undefined){
     const fetchMovies = async () => {
       const URL = `http://www.omdbapi.com/?s=${movieTitle}&apikey=f2c67f94`;
       const response = await fetch(URL);
@@ -14,7 +13,6 @@ const Movie = () => {
       //console.log(final_Data.Search);
       setMovieData(final_Data.Search);
     };
-    fetchMovies();
   }
   }, [isClicked]);
   return (
