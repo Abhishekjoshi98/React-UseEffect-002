@@ -17,7 +17,7 @@ const Movie = () => {
             fetchMovies();
   }
     // eslint-disable-next-line
-  }, [isClicked]);z
+  }, [isClicked]);
   return (
     <>
       <div>
