@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 
 const Movie = () => {
   const [movieData, setMovieData] = useState([]);
-  const [MovieTitle, setMovieTitle] = useState();
+  const [movieTitle, setMovieTitle] = useState();
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
-    if(MovieTitle !== undefined){
+    if(movieTitle !== undefined){
     const fetchMovies = async () => {
       const URL = `http://www.omdbapi.com/?s=${MovieTitle}&apikey=f2c67f94`;
       const response = await fetch(URL);
