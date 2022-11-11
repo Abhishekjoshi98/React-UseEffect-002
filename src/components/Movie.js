@@ -44,7 +44,7 @@ const Movie = () => {
           </button>
         </div>
         <div className="body-container">
-          <p>Here We Have Some Movies for You</p>
+          <p>Here You'll Get All The Movies</p>
         </div>
         <div className="display">
           {movieData !== undefined ? movieData.map((item, i) => {
