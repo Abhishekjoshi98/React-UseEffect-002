@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Movie = () => {
   const [movieData, setMovieData] = useState([]);
-  const [MovieTitle, setMovieTitle] = useState('Marvel');
+  const [MovieTitle, setMovieTitle] = useState();
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
